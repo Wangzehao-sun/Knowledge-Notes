@@ -82,7 +82,7 @@ git push -u origin main # -u (或 --set-upstream): 选项用于设置本地分�
 git config --global credential.helper store
 
 # 输入用户名和personal access tokens
-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
+.g.h.p._.La3GFXkhXaEeIPjJFAiXpWM3pqCDLJ3MU4ez
 ```
 
 #### 三、仓库管理
