@@ -89,7 +89,7 @@ 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
 
 在讲解具体命令之前，我们先需要区分几个概念
 
-<img src="C:\Users\dell\Desktop\Knowledge-Notes\工具教程\git\attachments\image-20240828164526793.png" alt="image-20240828164526793" style="zoom: 80%;" />
+<img src=".\attachments\image-20240828164526793.png" alt="image-20240828164526793" style="zoom: 80%;" />
 
 * 工作区：即主要的文件夹
 * 版本库：`.git`文件夹
@@ -233,6 +233,43 @@ build/*
 #### 四、分支管理
 
 **==TODO==**
+
+#### 五、常见报错
+
+**1、字符问题**
+
+```
+warning: LF will be replaced by CRLF in 课程学习/d2l深度学习笔记.md.
+```
+
+ Git 正在提醒你文件的行尾符将会被转换。具体来说：
+
+- **LF (Line Feed)** 是 Unix 类操作系统（比如 Linux、macOS）使用的换行符。
+- **CRLF (Carriage Return + Line Feed)** 是 Windows 系统使用的换行符。
+
+**解决方法**
+
+1. **如果你希望保留 LF 作为行尾符**： 你可以通过以下命令配置 Git，不进行 LF 到 CRLF 的转换：
+
+   ```
+   git config --global core.autocrlf false
+   ```
+
+   这将告诉 Git 在提交时不修改文件的行尾符，保持原样。
+
+2. **如果你接受将 LF 转换为 CRLF**： 你无需做任何修改，Git 会在提交时自动完成转换，以符合 Windows 系统的 CRLF 行尾符标准。
+
+3. **为项目设置自定义的行尾符规则**： 如果你在一个需要一致行尾符的项目中工作，可以使用 `.gitattributes` 文件为特定文件类型指定行尾符格式。例如，强制所有 `.md` 文件使用 LF 作为行尾符，你可以在项目根目录添加一个 `.gitattributes` 文件，内容如下：
+
+   ```
+   *.md text eol=lf
+   ```
+
+   这将确保所有 Markdown 文件（如 `*.md`）无论在哪个系统上，行尾符都保持 LF 格式。
+
+
+
+
 
 
 

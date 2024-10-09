@@ -17,7 +17,7 @@
 
    **例子**：房价（回归）、肿瘤预测（分类）、多特征分类
 
-   <img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920111200152.png" alt="image-20240920111200152" style="zoom:50%;" /><img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920111235605.png" alt="image-20240920111235605" style="zoom:50%;" /><img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920111307925.png" alt="image-20240920111307925" style="zoom:50%;" />
+   <img src=".\attachments\image-20240920111200152.png" alt="image-20240920111200152" style="zoom:50%;" /><img src=".\attachments\image-20240920111235605.png" alt="image-20240920111235605" style="zoom:50%;" /><img src=".\attachments\image-20240920111307925.png" alt="image-20240920111307925" style="zoom:50%;" />
 
 2. **无监督学习**（Unsupervised Learning）：
 
@@ -26,7 +26,7 @@
 
    **例子**：将一组用户按行为进行聚类，找到不同用户群体的共同特征。
 
-   <img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920112127351.png" alt="image-20240920112127351" style="zoom: 80%;" />
+   <img src=".\attachments\image-20240920112127351.png" alt="image-20240920112127351" style="zoom: 80%;" />
 
 3. **强化学习**（Reinforcement Learning）：
 
@@ -45,21 +45,21 @@
 
 对一个预测任务，输入特征向量为 𝒙，输出标签为𝑦，我们选择一个函数集合ℱ，通过**学习算法 𝒜 **和一组训练样本𝒟，从ℱ中学习到函数𝑓 ∗ (𝒙)．这样对新的输入𝒙，就可以用函数𝑓 ∗ (𝒙)进行预测．
 
-![image-20240920111431324](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920111431324.png)
+![image-20240920111431324](.\attachments\image-20240920111431324.png)
 
 ##### 1.2 机器学习三要素
 
 * ==模型==：最初的模型也成为**假设函数 h**， 机器学习的目标是从**假设空间**里找到一个**模型**来近似真实映射函数𝑔(𝒙)或真实条件概率分布𝑝𝑟(𝑦|𝒙)，包括线性空间和非线性空间
 
-![image-20240920113009945](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920113009945.png)
+![image-20240920113009945](.\attachments\image-20240920113009945.png)
 
 * ==学习准则==（**损失函数**）：一个好的模型 𝑓(𝒙, 𝜃∗ ) 应该在所有 (𝒙, 𝑦) 的可能取值上都与真实映射函数𝑦 = 𝑔(𝒙)尽可能的吻合，为此需要最小化损失函数 $ℒ(𝑦, 𝑓(𝒙; 𝜃))$，即模型的好坏可以用期望风险来衡量：
 
-  ![image-20240920114553812](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920114553812.png)
+  ![image-20240920114553812](.\attachments\image-20240920114553812.png)
 
   由于不知道真实的数据分布和映射函数 ，实际上无法计算其期望风险 ℛ(𝜃)．给定一个训练集 𝒟，我们可以计算的是经验风险（Empirical Risk），即在训练集上的平均损失：
 
-  ![image-20240920114450433](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920114450433.png)
+  ![image-20240920114450433](.\attachments\image-20240920114450433.png)
 
   常见的损失函数有：
 
@@ -77,7 +77,7 @@
 
   
 
-  <img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920151034006.png" alt="image-20240920151034006" style="zoom:67%;" />
+  <img src=".\attachments\image-20240920151034006.png" alt="image-20240920151034006" style="zoom:67%;" />
 
   > 如图所示，假设函数为$h_{\theta}(x)$ ,损失函数为$J(\theta_1)$ ,训练的目标就是希望通过减少$J(\theta_1)$,找到一个尽可能拟合训练数据点的假设函数h
 
@@ -91,7 +91,7 @@
 
      数$𝜃_0$，然后按下面的迭代公式来计算训练集𝒟 上风险函数的最小值：
 
-     ![](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920150744735.png)<img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240920152113914.png" alt="image-20240920152113914" style="zoom:50%;" />
+     ![](.\attachments\image-20240920150744735.png)<img src=".\attachments\image-20240920152113914.png" alt="image-20240920152113914" style="zoom:50%;" />
 
      其中$\alpha$ 表示每次更新的步长，及学习率。==学习率太小，收敛太慢；学习率太大，振荡难以收敛。==
 
@@ -135,7 +135,7 @@ $$
 $$
 梯度更新的过程即为：
 
-![image-20240924111415142](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20240924111415142.png)
+![image-20240924111415142](.\attachments\image-20240924111415142.png)
 
 利用梯度迭代更新是解决机器学习任务最一般的技术手段，如上述推导过程所示，多元线性回归同样可以使用这样的方法。而在下面，我们会额外介绍两种从数学的角度的针对线性回归求解的技术手段。
 
@@ -187,11 +187,11 @@ $$
    >
    > 最小二乘法的几何意义
    >
-   > <img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20241009110516521.png" alt="image-20241009110516521" style="zoom:50%;" />
+   > <img src=".\attachments\image-20241009110516521.png" alt="image-20241009110516521" style="zoom:50%;" />
    >
    > 在几何上，观测数据 $\mathbf{y}$ 可以看作是一个 n 维向量，解释变量矩阵 $\mathbf{X}$ 定义了一个在 n 维空间中的 p 维子空间，这个子空间是由 $\mathbf{X}$ 的列向量所张成的。最小二乘法通过寻找 $\hat{\mathbf{w}}$ 来确定一个预测向量 $\hat{\mathbf{y}}=\mathbf{X} \hat{\mathbf{w}}$，使得预测向量 $\hat{\mathbf{y}}$ 与观测数据 $\mathbf{y}$ 最近。由于这个预测向量 $\hat{\mathbf{y}}$ 一定在由 $\mathbf{X}$ 的列向量所张成的子空间中，所以即为观测数据 $\mathbf{y}$ 在由 $\mathbf{X}$ 张成的子空间上的**正交投影**。
    >
-   > <img src="C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20241009110103977.png" alt="image-20241009110103977" style="zoom:50%;" />
+   > <img src=".\attachments\image-20241009110103977.png" alt="image-20241009110103977" style="zoom:50%;" />
    >
    > 
 
@@ -237,7 +237,7 @@ $$
 
    详细计算过程为：
 
-   ![image-20241009115334405](C:\Users\dell\Desktop\Knowledge-Notes\课程学习\机器学习\attachments\image-20241009115334405.png)
+   <img src=".\attachments\image-20241009115334405.png" alt="image-20241009115334405" style="zoom: 80%;" />
 
 #### Chapter X、实践技术手段
 
